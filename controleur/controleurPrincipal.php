@@ -11,4 +11,3 @@ function controleurPrincipal($action){
     }
 }
 ?>
-}
