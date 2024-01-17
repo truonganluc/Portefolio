@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    height: 100vh;
+    width: 100vw;
+}
+
+.separateur {
+    margin-top: auto;
+    margin-bottom: 15px;
+    border: 0;
+    border-bottom: 3px solid black;
+  
+    width: 0;
+    animation: 1s ease-out forwards separation;
+}
+
+.bot {
+    margin-top: 15px;
+    margin-bottom: auto;
+}
+
+.top {
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+@keyframes separation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 95%;
+    }
+}
+/*----- Nav bar -----*/
+
+#navbar {
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+  
+#navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar li {
+    display: inline-block;
+}
+
+#navbar a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    opacity: 25%;
+}
+
+/*----- Accueil -----*/
+
+.box {
+    text-align: center;
+    background-color: white;
+    margin-left:auto;
+    margin-right:auto;
+    height: 80%;
+    width: 80%;
+    --c: black; /* the border color */
+    --b: 5px;    /* the border thickness*/
+    --g: 5px;     /* the gap on hover */
+    
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%,var(--c) 0;
+    background: 
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+       var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+      conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+       0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+    transition: .3s, background-position .3s .3s;
+    
+}
+.box:hover{
+    --_i: 100%;
+    transition: .3s, background-size .3s .3s;
+}
+
+/*----- Projets -----*/
+
+.projet {
+    background-color: rgb(181, 175, 175);
+    width: 1fr;
+    height: 1fr;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.hiddenText {
+    display:none;
+}
+
+.projet:hover{
+    background-color: rgb(198, 192, 192);
+
+}
+
+.projet:hover .hiddenText{
+    display: block;
+}
+
+.projets {
+    display : grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+/*----- Contact -----*/
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+  
+.containerform {
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    width: 50%;
+    display: inline-block;
+}
+
+
+/*----- footer -----*/
+footer {
+    margin-top : 5px;
+}
+.copyright {
+    margin-top: 10px;
+}
+.mentions {
+    text-align: center;
+    margin-top: 10px;
+}
+footer img {
+    margin-right: 10px;
+    float: right;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+}
+.column {
+    width: 100%;
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
