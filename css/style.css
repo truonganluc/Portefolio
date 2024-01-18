@@ -16,6 +16,12 @@ body {
     animation: 1s ease-out forwards separation;
 }
 
+.miniSep {
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .bot {
     margin-top: 15px;
     margin-bottom: auto;
@@ -96,12 +102,67 @@ body {
 
 /*----- Projets -----*/
 
+:root {
+    --col1: 1fr;
+    --col2: 1fr;
+    --col3: 1fr;
+    --row1: 1fr;
+    --row2: 1fr;
+    --row3: 1fr;
+    --cl-main: grey;
+    --cl-text: black;
+}
+
+.projets {
+    display: grid;
+    grid-template-columns: var(--col1) var(--col2) var(--col3);
+    grid-template-rows: var(--row1) var(--row2) var(--row3);
+    height: 100%;
+    transition: all .2s;
+}
+
+.projets:has(.projet:nth-child(3n+1):hover) {
+    --col1: 2fr;
+}
+
+.projets:has(.projet:nth-child(3n+2):hover) {
+    --col2: 2fr;
+}
+
+.projets:has(.projet:nth-child(3n+3):hover) {
+    --col3: 2fr;
+}
+.projets:has(.projet:nth-child(n+1):nth-child(-n+3):where(:hover, :focus)) {
+    --row1: 2fr;
+}
+.projets:has(.projet:nth-child(n+4):nth-child(-n+6):where(:hover, :focus)) {
+    --row2: 2fr;
+}
+
+.projets:has(.projet:nth-child(n+7):nth-child(-n+9):hover) {
+    --row3: 3fr;
+}
+
 .projet {
-    background-color: rgb(181, 175, 175);
-    width: 1fr;
-    height: 1fr;
+    display: grid;
+    transition: scale .2s;
     text-align: center;
-    border-radius: 30px;
+    overflow: hidden;
+    border: 2px solid var(--cl-text);
+    background-color: var(--cl-main);
+    
+}
+
+.projet:where(:hover, :focus) {
+    scale: 1.3;
+    z-index: 2;
+    box-shadow:0 0 50px 20px rgba(0, 0, 0, 0.5);
+}
+
+.projet > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
 
 .hiddenText {
@@ -109,21 +170,38 @@ body {
 }
 
 .projet:hover{
-    background-color: rgb(198, 192, 192);
+    background-color: rgb(159, 159, 159);
+}
 
+.projet:hover > img {
+    display:none;
 }
 
 .projet:hover .hiddenText{
     display: block;
 }
 
-.projets {
-    display : grid;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 10px;
+.btnProjet {
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #808080;
+    padding: 10px 15px;
+    border: solid #808080 2px;
+    box-shadow: none;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.btnProjet:hover{
+    transition : 0.5s;
+    padding: 10px 35px;
+    transform : translateY(-0px);
+    background-color: #fff;
+    color: black;
+    border: solid 2px black;
 }
 
 /*----- Contact -----*/
@@ -184,4 +262,42 @@ footer img {
     width: 100%;
     display : grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*----- Info -----*/
+.dlCV {
+    margin-top: 15px;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #808080;
+    padding: 10px 15px;
+    border: solid #808080 2px;
+    box-shadow: none;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.dlCV:hover{
+    transition : 0.5s;
+    padding: 10px 35px;
+    transform : translateY(-0px);
+    background-color: #fff;
+    color: black;
+    border: solid 2px black;
+}
+
+/*----- Veille -----*/
+.gridVeille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.gridVeille img {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
 }

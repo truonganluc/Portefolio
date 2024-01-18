@@ -4,7 +4,16 @@
 <div class="box">
     <div class="projets">
         <div class="projet un"> 
-            <div class="hiddenText">Mon premier projet</div>
+            <img src="include/images/congres.png">
+            <div class="hiddenText">
+                <h1>ANALIM</h1>
+                <p>Projet en équipe de 4<p>
+                <p>La maison des ligues de Lorraine organise en collaboration avec les autres régions françaises le [Congrès National des Maisons des Ligues]. <p>
+                <p>La Maison des ligues de Lorraine souhaite confier aux étudiants de BTS SIO du Lycée Suzanne Valadon la réalisation d’un projet consistant à développer l'application permettant la gestion du congrès (inscription des participants, mise en place de sessions, organisations des activités, facturation, etc.)<p>
+                <a href="include/rdm/Doc_ANALIM.pdf" download="ANALIM">
+                    <button class="btnProjet" role="button">Télécharger la doc</button>
+                </a>
+            </div>
         </div>
         <div class="projet deux">
             <div class="hiddenText"> Mon deuxieme projet</div>
