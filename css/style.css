@@ -75,6 +75,8 @@ body {
 /*----- Accueil -----*/
 
 .box {
+    overflow: auto;
+    position: flex;
     text-align: center;
     background-color: white;
     margin-left:auto;
@@ -101,6 +103,10 @@ body {
 }
 
 /*----- Projets -----*/
+
+.box.pro{
+    overflow: visible;
+}
 
 :root {
     --col1: 1fr;
@@ -242,7 +248,10 @@ input[type=submit]:hover {
 
 /*----- footer -----*/
 footer {
-    margin-top : 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .copyright {
     margin-top: 10px;

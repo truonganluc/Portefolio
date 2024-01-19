@@ -1,7 +1,7 @@
 <?php
     include "./include/header.html";
 ?>
-<div class="box">
+<div class="box pro">
     <div class="projets">
         <div class="projet un"> 
             <img src="include/images/congres.png">
